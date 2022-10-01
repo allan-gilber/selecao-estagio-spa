@@ -1,8 +1,12 @@
 import React from 'react';
+import {PageTitles, FormText} from '../../presentation/application/styles.js';
 
 const Home = () => {
   return (
-    <h1>template page</h1>
+    <>
+      <PageTitles>template page</PageTitles>
+      <FormText>template page</FormText>
+    </>
   );
 };
 

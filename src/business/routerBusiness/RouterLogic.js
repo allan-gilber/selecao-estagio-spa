@@ -1,13 +1,20 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Home from '../../presentation/Home';
+// Viwes
+import MainView from '../../presentation/MainView';
+import SignupView from '../../presentation/SignupView';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Home />}/>
+        <Route exact path='/' element={
+          <>
+            <MainView />
+            <SignupView/>
+          </>
+        }/>
       </Routes>
     </BrowserRouter>
   );

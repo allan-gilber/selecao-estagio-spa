@@ -1,5 +1,5 @@
 import React from 'react';
-import {GlobalStyle} from './styles';
+import GlobalStyle from './GlobalStyle';
 import GlobalState from '../../business/contextsBusiness/GlobalState';
 import Router from '../../business/routerBusiness/RouterLogic';
 

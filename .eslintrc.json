@@ -23,49 +23,49 @@
     ],
     "rules": {
         "indent": [
-            "error",
+            "warn",
             2
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "windows"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "always"
         ],
-        "no-trailing-spaces": "error",
-        "semi-spacing": "error",
+        "no-trailing-spaces": "warn",
+        "semi-spacing": "warn",
         "space-before-function-paren": [
-            "error",
+            "warn",
             {
                 "anonymous": "never",
                 "named": "never",
                 "asyncArrow": "always"
             }
         ],
-        "keyword-spacing": "error",
+        "keyword-spacing": "warn",
         "eol-last": [
-            "error",
+            "warn",
             "never"
         ],
         "array-bracket-spacing": [
-            "error",
+            "warn",
             "never",
             {
                 "singleValue": true
             }
         ],
         "object-curly-spacing": [
-            "error",
+            "warn",
             "never"
         ],
         "no-multiple-empty-lines": [
-            "error",
+            "warn",
             {
                 "max": 2,
                 "maxBOF": 0
@@ -94,7 +94,7 @@
         "no-lonely-if": "error",
         "comma-dangle": "error",
         "func-call-spacing": [
-            "error",
+            "warn",
             "never"
         ],
         "function-call-argument-newline": [
@@ -102,22 +102,23 @@
             "consistent"
         ],
         "line-comment-position": [
-            "error",
+            "warn",
             {
                 "position": "above"
             }
         ],
-        "arrow-spacing": "error",
+        "arrow-spacing": "warn",
         "arrow-parens": [
-            "error",
+            "warn",
             "as-needed"
         ],
         "comma-spacing": [
-            "error",
+            "warn",
             {
                 "before": false,
                 "after": true
             }
-        ]
+        ],
+        "@typescript-eslint/no-var-requires": "off"
     }
 }

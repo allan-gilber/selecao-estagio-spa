@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SignupViewContainer = styled.section`
     background-color: var(--background-color);
     height: max(100vh, 640px);
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;

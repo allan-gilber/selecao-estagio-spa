@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {RegisterListContainer, TitleBox, TableBox, ContactSection} from './styles.js';
-// import t from '../../data/assets/icons/topo-pag.svg';
 
 const RegisterList = () => {
 
@@ -12,22 +11,6 @@ const RegisterList = () => {
     {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'}
   ];
 
-  // function tableRender(){
-  //   let arrayOfElements = [];
-
-  //   for (let index = 0;  index < 4; index++){
-  //     console.log(index + 1, array[index]? array[index].userName : '', index, index < array.length || index < 4, index < array.length, index < 4);
-  //     arrayOfElements.push(
-  //       <tr>
-  //         <td>{index + 1}</td>
-  //         <td>{array[index]? array[index].userName : ''}</td>
-  //         <td>{array[index]? array[index].email : ''}</td>
-  //         <td>{array[index]? array[index].birthdate : ''}</td>
-  //         <td>{array[index]? array[index].phoneNumber : ''}</td>
-  //       </tr>)
-  //     );
-  //   }
-  // }
   return (
     <RegisterListContainer>
       <TitleBox>

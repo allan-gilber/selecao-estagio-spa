@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Button, Form, Input} from 'antd';
 import {SignupViewContainer, FormContainer} from './styles';
-
-import useForm from '../../business/useForm';
+import {DataParser} from '../../business/dataParser/dataParser';
+import {AxiosRequest} from '../../business/services/axiosServices';
 
 const SignupView = () => {
 
-  const formInitialState = {
-    name: '',
-    email: '',
-    birthday: '',
-    phoneNumber: ''
+  const clearedForm = {
+    userName: '',
+    userEmail: '',
+    userBirthday: '',
+    userPhoneNumber: '',
+    maskedNumber: ''
   };
+  const [form, setForm] = useState(clearedForm);
 
-  const [form, onChange] = useForm(formInitialState);
+  const clearForm = () => {setForm(clearedForm);};
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setForm({...form, maskedNumber: new DataParser().formatPhoneNumber(form.userPhoneNumber)});
+  }, [ form.userPhoneNumber ]);
 
   return (
     <SignupViewContainer>
@@ -24,16 +32,16 @@ const SignupView = () => {
         </header>
         <Form
           layout={'vertical'}
-          // labelCol= { {span: 4} }
-          // wrapperCol= { {span: 14} }
         >
           <Form.Item
             label="Nome"
           >
             <Input
               placeholder='Digite seu nome'
-              value={form.name}
-              onChange={() => onChange()}
+              value={form.userName}
+              onChange={e => {
+                setForm({...form, userName: e.target.value});
+              }}
             />
           </Form.Item>
           <Form.Item
@@ -41,35 +49,43 @@ const SignupView = () => {
           >
             <Input
               placeholder='Digite seu e-mail'
-              value={form.email}
-              onChange={() => onChange()}
+              value={form.userEmail}
+              onChange={e => setForm({...form, userEmail: e.target.value})}
             />
           </Form.Item>
           <Form.Item
             label="Nascimento"
           >
             <Input
-              name="birthdate"
+              name="userBirthday"
+              minLength={3}
+              type='date'
               placeholder='Digite sua data de nascimento'
-              value={form.birthdate}
-              onChange={() => onChange()}
+              value={form.userBirthday}
+              onChange={e => setForm({...form, userBirthday: e.target.value})}
             />
           </Form.Item>
           <Form.Item
             label="Telefone"
           >
             <Input
-              name="phoneNumber"
+              name="userPhoneNumber"
               placeholder='Digite seu telefone'
-              value={form.phoneNumber}
-              onChange={() => onChange()}
+              value={form.maskedNumber}
+              maxLength={15}
+              onChange={e => setForm({...form, userPhoneNumber: e.target.value})}
             />
           </Form.Item>
         </Form>
         <Button
           id='register-button-size'
+          loading={loading}
+          onClick={e => {
+            e.preventDefault;
+            new AxiosRequest().registerUser(form, setLoading, clearForm);
+          }}
         >
-          CADASTRAR
+          {loading ? '' : 'CADASTRAR'}
         </Button>
       </FormContainer>
     </SignupViewContainer>

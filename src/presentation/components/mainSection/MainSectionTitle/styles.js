@@ -9,16 +9,17 @@ align-items: left;
 color: var(--text-color);
 article{
     width: 50%;
-    margin-top: 40%;
+    margin-top: 15%;
 }
-span{
-    font-size: 100%;
-    /* min(100%, 5.5rem); */
+article span{
+    font-size: 4rem;
     width: 100%;
     display: block;
 }
-p {
-    font-size: min(80%);
+article p {
+    width: 100%;
+    word-spacing: 100%;
+    font-size: min(90%);
     display: inline-block;
 }
 `;

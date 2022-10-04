@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import backgroundContact from '../../data/assets/images/rodape-desktop.jpg';
 
 export const ContactSection = styled.footer`
+    background-image: url(${backgroundContact});
     width: 100%;
     height: 30%;
     display: flex;
@@ -35,6 +37,7 @@ export const TableBox = styled.section`
     width: 60%;
     height: 50%;
     position: relative;
+    overflow-y: scroll;
    
 `;
 
@@ -42,8 +45,6 @@ export const RegisterListContainer = styled.section`
     position: relative;
     background-color: var(--background-white-color);
     height: max(100vh, 640px);
-    /* max-width: 100vw;
-    box-sizing: content-box; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +61,6 @@ export const RegisterListContainer = styled.section`
     table {
         width: 100%;
         height: 50%; 
-        /* white-space: nowrap; */
         text-align: center;
         border-collapse: collapse;
     }

@@ -5,7 +5,16 @@ import robotoLight from '../../data/assets/Fonts/Roboto-Light_0.ttf';
 import hevelticaCondensed from '../../data/assets/Fonts/HelveticaCondensed_0.ttf';
 
 const GlobalStyle = createGlobalStyle`
-  // Used fonts
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border-radius: 4px;
+    font-family: 'heveltica-Condensed';
+    // Used fonts
   @font-face {
     font-family: 'Heveltica25-Ultra-Light-Regular';
     src: local('HelveticaUltraLt_0.ttf') url('/src/data/assets/Fonts/HelveticaUltraLt_0.ttf') format('truetype');
@@ -33,15 +42,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-
-  * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    border-radius: 4px;
-    font-family: 'heveltica-Condensed';
   }
 
     #root {
@@ -91,15 +91,10 @@ const GlobalStyle = createGlobalStyle`
   color: var(--background-white-color);
   }
 
-  /* ::focus{
-    border: 100%;
-  } */
-  
 }
     // Font classes
     .pageTitles{
       font-family: 'Heveltica25-Ultra-Light-Regular';
-      /* font-size: 2rem; */
       font-weight: normal;
     };
       
@@ -113,7 +108,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 2rem;
     };
   
-    /*Single Page Application section size and format*/
+    /* Single Page Application section size and format*/
     .spa-section {
       width: 100vw;
       height: 100vh;

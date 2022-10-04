@@ -3,7 +3,6 @@ import heveltica25UL from '../../data/assets/Fonts/HelveticaUltraLt_0.ttf';
 import robotoRegular from '../../data/assets/Fonts/Roboto-Regular_0.ttf';
 import robotoLight from '../../data/assets/Fonts/Roboto-Light_0.ttf';
 import hevelticaCondensed from '../../data/assets/Fonts/HelveticaCondensed_0.ttf';
-import MainBackgroundImg from '../../data/assets/images/main-back-ground.jpg';
 
 const GlobalStyle = createGlobalStyle`
   // Used fonts
@@ -47,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
     #root {
       width: max(100vw, 360px);
-      /* height: max(100vh, 640px); */
+      max-width: 100%;
       min-height: (100vh, 640px);
       overflow: hidden;
       background:var(--background-color);
@@ -70,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
     --column-tables-color: #29abe2;
     --table-information-color: #808080;
     --text-color: #dee3e9;
-    --background-white-color: #fff;
+    --background-white-color: #ffffff;
 // Classes
 .ant-form-item-label{
   label{
@@ -100,8 +99,8 @@ const GlobalStyle = createGlobalStyle`
     // Font classes
     .pageTitles{
       font-family: 'Heveltica25-Ultra-Light-Regular';
-      font-size: 2rem;
-      font-weight: 400;
+      /* font-size: 2rem; */
+      font-weight: normal;
     };
       
     .fieldCall {
@@ -116,18 +115,12 @@ const GlobalStyle = createGlobalStyle`
   
     /*Single Page Application section size and format*/
     .spa-section {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  
-    #main-section-container {
-      background-image: url(${MainBackgroundImg});
-      height: max(100vh, 640px);
-    }
-   
   }
 `;
 

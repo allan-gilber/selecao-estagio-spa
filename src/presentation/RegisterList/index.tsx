@@ -67,7 +67,13 @@ const RegisterList = () => {
           </tbody>
         </table>
       </TableBox>
-      <img src={arrowIcon.default}></img>
+      <img src={arrowIcon.default} onClick={() => {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }}></img>
       <ContactSection>
         <aside>
           Fulano Beltrano de Oliveira da Silva

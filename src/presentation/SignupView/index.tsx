@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 
 import {Button, Form, Input} from 'antd';
 import {SignupViewContainer, FormContainer} from './styles';
-import {DataParser} from '../../business/dataParser/dataParser';
+import {DataParser} from '../../business/dataParser/DataParser';
 import {AxiosRequest} from '../../business/services/axiosServices';
+import ScrollButton from '../components/ScrollButton';
 
 const SignupView = () => {
 
@@ -88,6 +89,7 @@ const SignupView = () => {
           {loading ? '' : 'CADASTRAR'}
         </Button>
       </FormContainer>
+      <ScrollButton />
     </SignupViewContainer>
   );
 };

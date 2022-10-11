@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Heveltica25-Ultra-Light-Regular;
     src: url(${heveltica25UL}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
 
   @font-face {
@@ -36,19 +38,19 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     flex-shrink: 0;
-    border-radius: 4px;
     font-family: Heveltica-Condensed;
   }
 
-    #root {
-      width: max(100vw, 360px);
-      max-width: 100%;
-      min-height: (100vh, 640px);
-      overflow: hidden;
-      background:var(--background-color);
-    }
+  #root {
+    width: max(100vw, 360px);
+    max-width: 100%;
+    min-height: (100vh, 640px);
+    overflow: hidden;
+    background:var(--background-color);
+    position: relative;
+  }
 
-    :root {
+  :root {
     // Transições de viewport
     --phone: 37.5rem;
     --tablet: 37.51rem;
@@ -66,51 +68,51 @@ const GlobalStyle = createGlobalStyle`
     --table-information-color: #808080;
     --text-color: #dee3e9;
     --background-white-color: #ffffff;
-}
-
-.ant-input{
-  font-family: Heveltica-Condensed;
-  color: var(--background-white-color);
-  padding: 0;
-  border-bottom-width : 5px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 0.1px solid var(--background-white-color);
-  ::placeholder{
-    font-family: Heveltica-Condensed;
-  color: var(--background-white-color);
   }
 
-}
-    // Font classes
-    .pageTitles{
-      font-family: Heveltica25-Ultra-Light-Regular;
-    };
-      
-    .fieldCall {
-      font-family: Roboto-Regular;
-    };
-      
-    .formText{
+  .ant-input{
       font-family: Heveltica-Condensed;
-    };
-  
-    /* Single Page Application section size and format*/
-    .spa-section {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: var(--background-white-color);
+      padding: 0;
+      border-bottom-width : 5px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.1px solid var(--background-white-color);
+      ::placeholder {
+        font-family: Heveltica-Condensed;
+      color: var(--background-white-color);
     }
+  }
 
-    #tableHeaderText {
-      table thead th{
-        font-family: Roboto-Regular;
-        font-weight: 500;
-        color:var(--column-title-color);
-      }
-    }
+  // Font classes
+  .pageTitles{
+    font-family: Heveltica25-Ultra-Light-Regular;
+  };
+    
+  .fieldCall {
+    font-family: Roboto-Regular;
+  };
+    
+  .formText{
+    font-family: Heveltica-Condensed;
+  };
+
+  /* Single Page Application section size and format*/
+  .spa-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tableHeaderText {
+  table thead th{
+    font-family: Roboto-Regular;
+    font-weight: 500;
+    color:var(--column-title-color);
+  }      
+}                   
 `;
 
 export default GlobalStyle;

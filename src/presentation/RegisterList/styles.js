@@ -37,12 +37,10 @@ export const TitleBox = styled.div`
 export const TableBox = styled.section`
     width: 60%;
     height: 50%;
-    position: relative;
-    overflow-y: scroll;
+    overflow-y: hidden;
 `;
 
 export const RegisterListContainer = styled.section`
-    position: relative;
     background-color: var(--background-white-color);
     height: max(100vh, 640px);
     display: flex;
@@ -51,13 +49,6 @@ export const RegisterListContainer = styled.section`
     justify-content: flex-start;
     padding-top: 5%;
     overflow: hidden;
-    img{
-        height: min(10%, 2rem);
-        position: absolute;
-        right: min(2rem, 5%);
-        top: 55%;
-        cursor: pointer;
-    }
     table {
         width: 100%;
         height: 50%; 

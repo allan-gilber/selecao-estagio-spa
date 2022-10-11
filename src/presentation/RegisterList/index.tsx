@@ -1,15 +1,34 @@
 import React from 'react';
 import {RegisterListContainer, TitleBox, TableBox, ContactSection} from './styles.js';
+import {DataParser} from '../../business/dataParser/dataParser';
+import {LocalUserModel} from '../../model/UserModel.js';
 
 const RegisterList = () => {
 
   const arrowIcon = require('../../data/assets/icons/topo-pag.svg');
 
-  const array = [
+  const array: LocalUserModel[] = [
     {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'},
     {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'},
     {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'}
   ];
+
+  // const mapInformation = () => {
+  //   // let index = 1;
+  //   const tableList: JSX.Element[] = [];
+  //   for (let index = 0; index < 4; index++){
+  //     tableList.push(
+  //       <tr key={index}>
+  //         <td >{index + 1}</td>
+  //         <td>{array[index]? array[index].userName : ''}</td>
+  //         <td>{array[index]? array[index].email : ''}</td>
+  //         <td>{array[index]? array[index].birthdate : ''}</td>
+  //         <td>{array[index]? array[index].phoneNumber : ''}</td>
+  //       </tr>
+  //     );
+  //   }
+  //   return tableList;
+  // };
 
   return (
     <RegisterListContainer>
@@ -36,7 +55,8 @@ const RegisterList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            {new DataParser().tableDataFormater(array) }
+            {/* <tr>
               <td>{1}</td>
               <td>{array[1]? array[1].userName : ''}</td>
               <td>{array[1]? array[1].email : ''}</td>
@@ -63,7 +83,7 @@ const RegisterList = () => {
               <td>{array[4]? array[4].email : ''}</td>
               <td>{array[4]? array[4].birthdate : ''}</td>
               <td>{array[4]? array[4].phoneNumber : ''}</td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </TableBox>

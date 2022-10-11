@@ -3,6 +3,7 @@ import backgroundContact from '../../data/assets/images/rodape-desktop.jpg';
 
 export const ContactSection = styled.footer`
     background-image: url(${backgroundContact});
+    background-size: 100%;
     width: 100%;
     height: 30%;
     display: flex;
@@ -38,7 +39,6 @@ export const TableBox = styled.section`
     height: 50%;
     position: relative;
     overflow-y: scroll;
-   
 `;
 
 export const RegisterListContainer = styled.section`
@@ -65,6 +65,18 @@ export const RegisterListContainer = styled.section`
         border-collapse: collapse;
     }
 
+    table thead th{
+        font-family: Roboto-Regular;
+        font-weight: 500;
+        color:var(--column-title-color);
+      }
+
+      table tbody td{
+        font-family: Heveltica-Condensed;
+        font-weight: 500;
+        color:var(--table-information-color);
+      }
+
     table tbody td, table thead th {
         border: 1px solid var(--background-color);
         height: 4rem;
@@ -82,12 +94,21 @@ export const RegisterListContainer = styled.section`
     table tr:last-child td {
         border-bottom: 0;
     }
+    table tr td:first-child{
+        color:var(--column-title-color);
+    }
+
     table tr td:first-child,
     table tr th:first-child {
         border-left: 0;
     }
+
+    table tr td:last-child {
+        font-family: Roboto-Light;
+        font-weight: 500;
+    }
     table tr td:last-child,
     table tr th:last-child {
         border-right: 0;
-    } 
+    }
 `;

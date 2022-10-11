@@ -11,16 +11,19 @@ export const NavBarContainer = styled.nav`
 export const ListStyle = styled.ul`
     color: white;
     height: max(3.5rem, 7%); 
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     font-size: 1.4rem;
     border-bottom: 3px solid transparent;
+    margin: 0;
 
     li{
-        margin-right: 2rem;
+        text-align: right;
+        font-family: Heveltica25-Ultra-Light-Regular;
+        margin-left: 2rem;
         cursor: pointer;
         z-index: 2;
         border-radius: 0;
@@ -35,6 +38,6 @@ export const ListStyle = styled.ul`
 `;
 
 export const Logo = styled.img`
-    height: max(3.5rem, 7%); 
-    width: max(20%, 5rem);
+    height: min(3rem, 30%); 
+    /* width: max(15%, 5rem); */
 `;

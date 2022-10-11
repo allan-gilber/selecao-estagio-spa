@@ -5,6 +5,30 @@ import robotoLight from '../../data/assets/Fonts/Roboto-Light_0.ttf';
 import hevelticaCondensed from '../../data/assets/Fonts/HelveticaCondensed_0.ttf';
 
 const GlobalStyle = createGlobalStyle`
+  // Used fonts
+  @font-face {
+    font-family: Heveltica25-Ultra-Light-Regular;
+    src: url(${heveltica25UL}) format('truetype');
+  }
+
+  @font-face {
+      font-family: Roboto-Regular;
+      src: url(${robotoRegular}) format('truetype');
+  }
+
+  @font-face {
+      font-family: Roboto-Light;
+      src: url(${robotoLight}) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+    font-family: Heveltica-Condensed;
+    src: url(${hevelticaCondensed}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   * {
     margin: 0;
@@ -13,35 +37,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     flex-shrink: 0;
     border-radius: 4px;
-    font-family: 'heveltica-Condensed';
-    // Used fonts
-  @font-face {
-    font-family: 'Heveltica25-Ultra-Light-Regular';
-    src: local('HelveticaUltraLt_0.ttf') url('/src/data/assets/Fonts/HelveticaUltraLt_0.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Roboto-Regular';
-      src: local(${robotoRegular}) format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Roboto-Light';
-      src: local(${robotoLight}) format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'heveltica-Condensed';
-    src: local(${hevelticaCondensed}) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+    font-family: Heveltica-Condensed;
   }
 
     #root {
@@ -70,16 +66,10 @@ const GlobalStyle = createGlobalStyle`
     --table-information-color: #808080;
     --text-color: #dee3e9;
     --background-white-color: #ffffff;
-// Classes
-.ant-form-item-label{
-  label{
-    font-family: 'Heveltica25-Ultra-Light-Regular';
-    color: var(--background-white-color);
-  }
 }
 
 .ant-input{
-  font-family: 'heveltica-Condensed';
+  font-family: Heveltica-Condensed;
   color: var(--background-white-color);
   padding: 0;
   border-bottom-width : 5px;
@@ -87,25 +77,22 @@ const GlobalStyle = createGlobalStyle`
   border: none;
   border-bottom: 0.1px solid var(--background-white-color);
   ::placeholder{
-    font-family: 'heveltica-Condensed';
+    font-family: Heveltica-Condensed;
   color: var(--background-white-color);
   }
 
 }
     // Font classes
     .pageTitles{
-      font-family: 'Heveltica25-Ultra-Light-Regular';
-      font-weight: normal;
+      font-family: Heveltica25-Ultra-Light-Regular;
     };
       
     .fieldCall {
-      font-family: 'Heveltica25-Ultra-Light-Regular';
-      font-size: 2rem;
+      font-family: Roboto-Regular;
     };
       
     .formText{
-      font-family: 'hevelticaCondensed';
-      font-size: 2rem;
+      font-family: Heveltica-Condensed;
     };
   
     /* Single Page Application section size and format*/
@@ -116,7 +103,14 @@ const GlobalStyle = createGlobalStyle`
       flex-direction: column;
       align-items: center;
     }
-  }
+
+    #tableHeaderText {
+      table thead th{
+        font-family: Roboto-Regular;
+        font-weight: 500;
+        color:var(--column-title-color);
+      }
+    }
 `;
 
 export default GlobalStyle;

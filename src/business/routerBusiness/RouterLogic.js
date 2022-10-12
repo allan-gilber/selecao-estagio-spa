@@ -17,7 +17,7 @@ export default function Router(){
               <MainView />
               <SignupView />
               <RegisterList />
-              {/* <ScrollButton /> */}
+              <ScrollButton />
             </>
           }/>
       </Routes>

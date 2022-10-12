@@ -5,29 +5,19 @@ import {ScrollButtonContainer} from './styles.js';
 
 const ScrollButton = () => {
   const arrowIcon = require('../../../data/assets/icons/topo-pag.svg');
-  let scrollButton, rootElement, eventListener;
+
+  let scrollButton, rootElement;
   const ScrollLogic = new ScrollBusiness();
-  let scrollTimer;
+  let scrollTimer:  NodeJS.Timeout;
 
-
-  const addEventlistener = () => {
-
+  useEffect(() => {
     scrollButton = document.getElementById('scrollButton')!;
     rootElement = document.documentElement!;
-    console.log('scroll', scrollButton);
-    document.addEventListener('scroll', function buttonHandler(){
-      window.clearTimeout(scrollTimer);
-
-      scrollTimer = setTimeout(() => {
-        new ScrollBusiness().handleScroll(rootElement, scrollButton);
-      });
-    });
-    console.log('event', eventListener);
-  };
-  useEffect(() => {
-    addEventlistener();
+    window.clearInterval(scrollTimer);
+    scrollTimer = setInterval(() => {
+      ScrollLogic.buttonHandler(rootElement, scrollButton);
+    }, 500);
   }, []);
-
 
   return (
     <ScrollButtonContainer

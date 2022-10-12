@@ -1,5 +1,4 @@
 export class ScrollBusiness {
-  private scrollTimer: any;
 
   public  handleScroll(
     rootElement: HTMLElement, scrollButton: HTMLElement
@@ -8,28 +7,45 @@ export class ScrollBusiness {
   }
 
   public buttonHandler(rootElement: HTMLElement, scrollButton: HTMLElement): any {
-    clearTimeout(this.scrollTimer);
-    this.setScrollTimer(setTimeout(() => {
-      console.log('lol', rootElement, scrollButton);
-      // Do something on scroll
-      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-      console.log('dados', rootElement.scrollHeight, rootElement.clientHeight, rootElement.scrollTop, (rootElement.scrollTop / scrollTotal ) > 0.80);
-      if ((rootElement.scrollTop / scrollTotal ) > 0.80 ) {
-        // Show button
-        return scrollButton.classList.add('showButton');
-      } else {
-        // Hide button
-        return scrollButton.classList.remove('showButton');
-      }
-    }, 30));
+    console.log('dados', window.innerHeight, (window.innerHeight * 0.3), (window.innerHeight * 0.3) < rootElement.scrollTop);
+    console.log('dados2', window.innerHeight, rootElement.scrollTop);
+    if ((window.innerHeight * 0.3) < rootElement.scrollTop ) {
+      scrollButton.classList.add('showButton');
+    } else {
+      scrollButton.classList.remove('showButton');
+    }
   }
 
-  public setScrollTimer(value: any){
-    this.scrollTimer = value;
-  }
+  public activeButtonHandler(rootElement: HTMLElement){
+    const sectionDefiner = Math.trunc(rootElement.scrollTop / window.innerHeight);
+    console.log('section', sectionDefiner);
 
-  public getScrollTimer(){
-    return this.scrollTimer;
+    switch (sectionDefiner){
+    case 0:{
+      const navButton = document.getElementById(`navButton${sectionDefiner}`)!;
+      navButton.classList.add('showButton');
+
+      break;
+    }
+    case 1:{
+      const navButton = document.getElementById(`navButton${sectionDefiner}`)!;
+      navButton.classList.add('showButton');
+
+      break;
+    }
+    case 2:{
+      const navButton = document.getElementById(`navButton${sectionDefiner}`)!;
+      navButton.classList.add('showButton');
+
+      break;
+    }
+
+    default:{
+      const navButton = document.getElementById(`navButton${sectionDefiner}`)!;
+      navButton.classList.add('showButton');
+
+      break;}
+    }
   }
 }
 

@@ -49,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
     background:var(--background-color);
     position: relative;
   }
-
   :root {
     // Transições de viewport
     --phone: 37.5rem;
@@ -68,20 +67,6 @@ const GlobalStyle = createGlobalStyle`
     --table-information-color: #808080;
     --text-color: #dee3e9;
     --background-white-color: #ffffff;
-  }
-
-  .ant-input{
-      font-family: Heveltica-Condensed;
-      color: var(--background-white-color);
-      padding: 0;
-      border-bottom-width : 5px;
-      background-color: transparent;
-      border: none;
-      border-bottom: 0.1px solid var(--background-white-color);
-      ::placeholder {
-        font-family: Heveltica-Condensed;
-      color: var(--background-white-color);
-    }
   }
 
   // Font classes
@@ -104,6 +89,11 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .showButton {
+    visibility: visible;
+    opacity: 1;
   }
 
   #tableHeaderText {

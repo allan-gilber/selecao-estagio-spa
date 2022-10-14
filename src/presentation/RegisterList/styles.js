@@ -3,19 +3,23 @@ import backgroundContact from '../../data/assets/images/rodape-desktop.jpg';
 
 export const ContactSection = styled.footer`
     background-image: url(${backgroundContact});
+    background-size: 100%;
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: var(--register-btn-color);
     padding-bottom: 1rem;
+    padding-top: max(2rem, 2%);
     aside{
-        font-size: 1rem;
+        width: 30%;
+        font-family: Roboto-Light;
+        font-size: max(1rem, 30%);
         color: var(--background-white-color);
         text-align: center;
-        line-height: 250%;
+        line-height: 200%;
     }
 `;
 
@@ -27,7 +31,7 @@ export const TitleBox = styled.div`
         justify-content: center;
         text-align: center;
         justify-content: center;
-        font-size: 3rem;
+        font-size: max(4rem, 80%);
         color: var(--background-color);
         font-weight: normal;
     }
@@ -36,13 +40,10 @@ export const TitleBox = styled.div`
 export const TableBox = styled.section`
     width: 60%;
     height: 50%;
-    position: relative;
-    overflow-y: scroll;
-   
+    overflow-y: hidden;
 `;
 
 export const RegisterListContainer = styled.section`
-    position: relative;
     background-color: var(--background-white-color);
     height: max(100vh, 640px);
     display: flex;
@@ -51,43 +52,65 @@ export const RegisterListContainer = styled.section`
     justify-content: flex-start;
     padding-top: 5%;
     overflow: hidden;
-    img{
-        height: min(10%, 2rem);
-        position: absolute;
-        right: min(2rem, 5%);
-        top: 55%;
-        cursor: pointer;
-    }
+    font-size: 8rem;
+
     table {
         width: 100%;
-        height: 50%; 
+        height: 50%;
+        font-size: max(2rem, 30%);
         text-align: center;
         border-collapse: collapse;
     }
 
+    table thead th{
+        font-family: Roboto-Regular;
+        font-weight: 600;
+        color:var(--column-title-color);
+    }
+
+    table tbody td{
+    font-family: Heveltica-Condensed;
+    font-weight: 500;
+    color:var(--table-information-color);
+    }
+
     table tbody td, table thead th {
-        border: 1px solid var(--background-color);
+        border: min(0.3rem, 2px) solid var(--background-color);
         height: 4rem;
         min-height: 4rem;
     }
+
      table thead tr:first-child th {
         border-top: 0;
     }
+
     table tbody tr td {
         min-width: 7rem;
     }
     table tbody tr td:first-child {
         width: 4rem;
     }
+
     table tr:last-child td {
         border-bottom: 0;
     }
+
+    table tr td:first-child{
+        color:var(--column-title-color);
+    }
+
     table tr td:first-child,
     table tr th:first-child {
         border-left: 0;
     }
+
+    table tr td:last-child {
+        font-family: Roboto-Light;
+        font-weight: 500;
+    }
+
     table tr td:last-child,
     table tr th:last-child {
         border-right: 0;
-    } 
+    }
 `;

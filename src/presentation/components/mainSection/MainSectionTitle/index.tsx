@@ -3,10 +3,10 @@ import {TitleDisposition} from './styles.js';
 
 const MainSectionTitle = () => {
   return (
-    <TitleDisposition className='fieldCall'>
+    <TitleDisposition>
       <article>
-        <span>ESTÁGIO</span>
-        <p>PROVA DE SELEÇÃO</p>
+        <span className='pageTitles'>ESTÁGIO</span>
+        <p className='pageTitles'>PROVA DE SELEÇÃO</p>
       </article>
     </TitleDisposition>
   );

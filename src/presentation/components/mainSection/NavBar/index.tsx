@@ -11,13 +11,20 @@ const NavBar = () => {
         src={LogoIn8}
       />
       <ListStyle>
-        <li className='active' style={{listStyle: 'none'}}>
+        <li
+          id='navButton1'
+          style={{listStyle: 'none'}
+          }>
           cadastro
         </li>
-        <li>
+        <li
+          id='navButton2'
+        >
           lista
         </li>
-        <li>
+        <li
+          id='navButton3'
+        >
           sobre mim
         </li>
       </ListStyle>

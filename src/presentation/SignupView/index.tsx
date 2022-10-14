@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import {Button, Form, Input} from 'antd';
 import {SignupViewContainer, FormContainer} from './styles';
-import {DataParser} from '../../business/dataParser/dataParser';
+import {DataParser} from '../../business/dataParser/DataParser';
 import {AxiosRequest} from '../../business/services/axiosServices';
 
 const SignupView = () => {
@@ -78,7 +78,6 @@ const SignupView = () => {
           </Form.Item>
         </Form>
         <Button
-          id='register-button-size'
           loading={loading}
           onClick={e => {
             e.preventDefault;

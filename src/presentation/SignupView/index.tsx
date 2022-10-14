@@ -78,7 +78,6 @@ const SignupView = () => {
           </Form.Item>
         </Form>
         <Button
-          id='register-button-size'
           loading={loading}
           onClick={e => {
             e.preventDefault;

@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import heveltica25UL from '../../data/assets/Fonts/HelveticaUltraLt_0.ttf';
+import heveltica25UL from '../../data/assets/Fonts/HelveticaUltraLt_0.otf';
 import robotoRegular from '../../data/assets/Fonts/Roboto-Regular_0.ttf';
 import robotoLight from '../../data/assets/Fonts/Roboto-Light_0.ttf';
 import hevelticaCondensed from '../../data/assets/Fonts/HelveticaCondensed_0.ttf';
@@ -7,8 +7,8 @@ import hevelticaCondensed from '../../data/assets/Fonts/HelveticaCondensed_0.ttf
 const GlobalStyle = createGlobalStyle`
   // Used fonts
   @font-face {
-    font-family: Heveltica25-Ultra-Light-Regular;
-    src: url(${heveltica25UL}) format('truetype');
+    font-family: Heveltica25-Ultralight-25;
+    src: url(${heveltica25UL}) format('OpenType');
     font-weight: normal;
     font-style: normal;
   }
@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
 
   // Font classes
   .pageTitles{
-    font-family: Heveltica25-Ultra-Light-Regular;
+    font-family: Heveltica25-Ultralight-25;
   };
     
   .fieldCall {

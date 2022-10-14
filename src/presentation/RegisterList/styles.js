@@ -15,11 +15,11 @@ export const ContactSection = styled.footer`
     padding-top: max(2rem, 2%);
     aside{
         width: 30%;
-        height: 20%;
+        font-family: Roboto-Light;
         font-size: max(1rem, 30%);
         color: var(--background-white-color);
         text-align: center;
-        line-height: 250%;
+        line-height: 200%;
     }
 `;
 

@@ -24,7 +24,7 @@ export const ListStyle = styled.ul`
     li{
         width: fit-content;
         text-align: right;
-        font-family: Heveltica25-Ultra-Light-Regular;
+        font-family: Heveltica25-Ultralight-25;
         margin-left: max(2rem, 10%);
         cursor: pointer;
         z-index: 2;

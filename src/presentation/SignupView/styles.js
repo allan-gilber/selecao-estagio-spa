@@ -69,14 +69,14 @@ export const SignupViewContainer = styled.section`
         }
     }
 
-    // Ids
-
-    #register-button-size{
+    // CADASTRAR button class
+    .ant-btn-default {
         height: max(3rem, 10%);
         width: max(5rem, 60%);
         padding: 0.1rem 0.1rem;
         span{
             font-size: 350%;
+            font-family: Heveltica25-Ultralight-25;
         }
     }
 `;

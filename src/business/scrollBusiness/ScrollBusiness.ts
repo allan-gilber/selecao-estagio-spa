@@ -15,8 +15,6 @@ export class ScrollBusiness {
   }
 
   public buttonHandler(rootElement: HTMLElement, scrollButton: HTMLElement): any {
-    console.log('dados', window.innerHeight, (window.innerHeight * 0.3), (window.innerHeight * 0.3) < rootElement.scrollTop);
-    console.log('dados2', window.innerHeight, rootElement.scrollTop);
     if ((window.innerHeight * 0.3) < rootElement.scrollTop ) {
       scrollButton.classList.add('showButton');
     } else {
@@ -26,7 +24,6 @@ export class ScrollBusiness {
 
   public activeButtonHandler(rootElement: HTMLElement){
     const sectionDefiner = Math.trunc(rootElement.scrollTop / window.innerHeight);
-    console.log('section', sectionDefiner);
 
     switch (sectionDefiner){
     case 0:{

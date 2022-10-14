@@ -2,9 +2,9 @@
 import React, {useEffect} from 'react';
 import ScrollBusiness from '../../../business/scrollBusiness/ScrollBusiness';
 import {ScrollButtonContainer} from './styles.js';
+import Icon from '../../../data/assets/icons/topo-pag.svg';
 
 const ScrollButton = () => {
-  const arrowIcon = require('../../../data/assets/icons/topo-pag.svg');
 
   let scrollButton, rootElement;
   const ScrollLogic = new ScrollBusiness();
@@ -22,13 +22,9 @@ const ScrollButton = () => {
   return (
     <ScrollButtonContainer
       id='scrollButton'
-      src={arrowIcon.default}
+      src={Icon}
       onClick={() => {
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
+        ScrollLogic.scrollToTopSmooth();
       }}
     />
   );

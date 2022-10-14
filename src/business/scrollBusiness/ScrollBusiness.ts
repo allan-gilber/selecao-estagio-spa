@@ -1,5 +1,13 @@
 export class ScrollBusiness {
 
+  public scrollToTopSmooth(){
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   public  handleScroll(
     rootElement: HTMLElement, scrollButton: HTMLElement
   ): any {

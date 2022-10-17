@@ -17,7 +17,6 @@ export const ListStyle = styled.ul`
     justify-content: flex-end;
     align-items: center;
     font-size: 1.4rem;
-    border-bottom: 3px solid transparent;
     margin: 0;
     font-size: max(3rem, 40%);
 
@@ -30,12 +29,16 @@ export const ListStyle = styled.ul`
         z-index: 2;
         border-radius: 0;
         :hover {
-            border-bottom: 2px solid gray;
+            border-bottom: 0.25rem solid gray;
         }
+    }
 
-        :active{
-            border-bottom: 2px solid gray;
-        }
+    li:first-child{
+        list-style: none;
+    }
+
+    #active {
+        border-bottom: 0.25rem solid gray;
     }     
 `;
 

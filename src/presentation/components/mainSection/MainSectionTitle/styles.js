@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TitleDisposition = styled.div`
-    width: 54%;
+    width: 51%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@ export const TitleDisposition = styled.div`
         justify-content: flex-start;
         width: 50%;
         height: 100%;
-        padding-top: 18%;
-        font-size: max(8rem, 200%);
+        padding-top: 13%;
+        font-size: max(7rem, 200%);
         display: inline-block;
     }
     article span {
@@ -25,8 +25,7 @@ export const TitleDisposition = styled.div`
     article p {
         margin: 0;
         width: 100%;
+        font-size: 40%;
         word-spacing: 100%;
-        font-size: 38%;
-        word-spacing: 200%;
     }
 `;

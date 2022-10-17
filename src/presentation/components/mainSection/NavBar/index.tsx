@@ -6,25 +6,20 @@ const NavBar = () => {
   const LogoIn8 = require('../../../../data/assets/icons/logo-in8-dev.svg').default;
 
   return (
-    <NavBarContainer id='lol'>
+    <NavBarContainer>
       <Logo
         src={LogoIn8}
       />
       <ListStyle>
         <li
-          id='navButton1'
-          style={{listStyle: 'none'}
-          }>
+          id='active'
+        >
           cadastro
         </li>
-        <li
-          id='navButton2'
-        >
+        <li>
           lista
         </li>
-        <li
-          id='navButton3'
-        >
+        <li>
           sobre mim
         </li>
       </ListStyle>

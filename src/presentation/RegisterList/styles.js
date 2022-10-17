@@ -5,18 +5,18 @@ export const ContactSection = styled.footer`
     background-image: url(${backgroundContact});
     background-size: 100%;
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--register-btn-color);
     padding-bottom: 1rem;
-    padding-top: max(2rem, 2%);
-    aside{
+    padding-top: auto;
+    aside {
         width: 30%;
         font-family: Roboto-Light;
-        font-size: max(1rem, 30%);
+        font-size: 1.5rem;
         color: var(--background-white-color);
         text-align: center;
         line-height: 200%;
@@ -24,23 +24,24 @@ export const ContactSection = styled.footer`
 `;
 
 export const TitleBox = styled.div`
-    height: 20%;
+    height: 15%;
     width: 53%;
     h3{
         display: flex;
         justify-content: center;
         text-align: center;
         justify-content: center;
-        font-size: max(4rem, 80%);
+        font-size: 3rem;
         color: var(--background-color);
-        font-weight: normal;
+        font-weight: 600;
     }
 `;
 
 export const TableBox = styled.section`
-    width: 60%;
+    width: 55%;
     height: 50%;
     overflow-y: hidden;
+    padding: 0 0 5% 0;
 `;
 
 export const RegisterListContainer = styled.section`
@@ -50,45 +51,43 @@ export const RegisterListContainer = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 5%;
+    padding-top: 2%;
     overflow: hidden;
-    font-size: 8rem;
+    font-size: 32rem;
 
     table {
         width: 100%;
-        height: 50%;
-        font-size: max(2rem, 30%);
+        font-size: 1.5rem;
         text-align: center;
         border-collapse: collapse;
+        table-layout: fixed;
     }
 
-    table thead th{
+    table thead th {
         font-family: Roboto-Regular;
         font-weight: 600;
         color:var(--column-title-color);
+        height: 4rem;
+    }
+
+    table thead th:first-child {
+        width: 6rem;
     }
 
     table tbody td{
-    font-family: Heveltica-Condensed;
-    font-weight: 500;
-    color:var(--table-information-color);
+        font-family: Heveltica-Condensed;
+        font-weight: 500;
+        color:var(--table-information-color);
+        height: 4rem;
+        padding: 0 1%;
     }
 
     table tbody td, table thead th {
         border: min(0.3rem, 2px) solid var(--background-color);
-        height: 4rem;
-        min-height: 4rem;
     }
 
      table thead tr:first-child th {
         border-top: 0;
-    }
-
-    table tbody tr td {
-        min-width: 7rem;
-    }
-    table tbody tr td:first-child {
-        width: 4rem;
     }
 
     table tr:last-child td {
@@ -106,7 +105,7 @@ export const RegisterListContainer = styled.section`
 
     table tr td:last-child {
         font-family: Roboto-Light;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     table tr td:last-child,

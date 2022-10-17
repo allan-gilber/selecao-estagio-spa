@@ -7,9 +7,9 @@ const RegisterList = () => {
 
 
   const array: LocalUserModel[] = [
-    {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'},
-    {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'},
-    {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '31996661111'}
+    {userName: 'Fulano Beltrano de Oliveira da Silva', email: 'fulanobos@gmail.com', birthdate: '05/05/2020', phoneNumber: '(31) 9 96661111'},
+    {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '(31) 9 96661111'},
+    {userName: 'teste', email: 'teste@teste', birthdate: '05/05/2020', phoneNumber: '(31) 9 96661111'}
   ];
 
   return (
@@ -21,7 +21,7 @@ const RegisterList = () => {
         <table>
           <thead>
             <tr>
-              <th></th>
+              <th/>
               <th>
                 Nome
               </th>

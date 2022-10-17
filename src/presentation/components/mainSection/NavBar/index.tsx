@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollBusiness from '../../../../business/scrollBusiness/ScrollBusiness';
 import {NavBarContainer, Logo, ListStyle} from './styles.js';
 
 
@@ -16,10 +17,14 @@ const NavBar = () => {
         >
           cadastro
         </li>
-        <li>
+        <li
+          onClick={() => new ScrollBusiness().scrollToToSection(1)}
+        >
           lista
         </li>
-        <li>
+        <li
+          onClick={() => new ScrollBusiness().scrollToToSection(2)}
+        >
           sobre mim
         </li>
       </ListStyle>

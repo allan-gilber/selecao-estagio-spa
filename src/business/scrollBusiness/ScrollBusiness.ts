@@ -8,6 +8,14 @@ export class ScrollBusiness {
     });
   }
 
+  public scrollToToSection(sectionNumber: number){
+    window.scroll({
+      top: sectionNumber * window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   public  handleScroll(
     rootElement: HTMLElement, scrollButton: HTMLElement
   ): any {
@@ -15,7 +23,7 @@ export class ScrollBusiness {
   }
 
   public buttonHandler(rootElement: HTMLElement, scrollButton: HTMLElement): any {
-    if ((window.innerHeight * 0.3) < rootElement.scrollTop ) {
+    if ((window.innerHeight * 0.7) < rootElement.scrollTop ) {
       scrollButton.classList.add('showButton');
     } else {
       scrollButton.classList.remove('showButton');

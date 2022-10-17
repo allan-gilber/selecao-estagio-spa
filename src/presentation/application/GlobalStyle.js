@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     background:var(--background-color);
     position: relative;
   }
+
   :root {
     // Transições de viewport
     --phone: 37.5rem;

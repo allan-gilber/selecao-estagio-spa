@@ -14,6 +14,7 @@ const SignupView = () => {
     userPhoneNumber: '',
     maskedNumber: ''
   };
+
   const [form, setForm] = useState(clearedForm);
 
   const clearForm = () => {setForm(clearedForm);};

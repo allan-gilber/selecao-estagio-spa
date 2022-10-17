@@ -12,26 +12,24 @@ export const SignupViewContainer = styled.section`
     justify-content: center;
     font-size: 32rem;
 
-    // Antd Class Overloading
+    // Antd Class Overrides
     .ant-form {
         width: 100%;
-        height: 65%;
-        padding-top: 10%;
+        height: 60%;
+        padding: 10% 0;
     }
 
     .ant-form-item {
-        height: 20%;
         margin: 0;
         padding-top: 2rem;
     }
 
-    .ant-col{
-        height: 50%;
-    }
     .ant-form-item-label{
+        padding: 0;
+        height: 30%;
         label{
             font-family: Roboto-Regular;
-            font-size: max(2rem, 2vh);
+            font-size: max(1rem, 2vh);
             color: var(--background-white-color);
         }
     }
@@ -40,22 +38,24 @@ export const SignupViewContainer = styled.section`
         width: fit-content;
         height: fit-content;
         color: var(--background-color);
-        font-size: 5%;
+        font-size: 3%;
         font-weight: 400;
         text-decoration: none;
         border-width: none;
         border: none;
         background-color: var(--register-btn-color);
     }
-
-    .ant-form-item-control-input, .ant-form-item-row, .ant-form-item-control-input-content{
-        height: 100%;
-        font-size: 2%;
+    .ant-form-item-control {
+        height: 40%;
     }
+
+    /* .ant-form-item-control-input, .ant-form-item-row, .ant-form-item-control-input-content{
+        height: 100%;
+    } */
 
     .ant-input{
         font-family: Heveltica-Condensed;
-        font-size: max(2rem,2vh);
+        font-size: max(1rem,2vh);
         height: 100%;
         color: var(--background-white-color);
         padding: 0;
@@ -83,7 +83,7 @@ export const SignupViewContainer = styled.section`
 
 export const FormContainer = styled.article`
     width: 35%;
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -95,12 +95,13 @@ export const FormContainer = styled.article`
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 5%;
     }
 
     h3 {
-        font-size: max(6rem, 20%);
+        font-size: 10%;
         color: var(--text-color);
-        font-weight: 300;
+        font-weight: 600;
         margin: 0;
     }
 `;

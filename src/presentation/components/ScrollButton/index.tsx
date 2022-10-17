@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, {useEffect} from 'react';
 import ScrollBusiness from '../../../business/scrollBusiness/ScrollBusiness';
 import {ScrollButtonContainer} from './styles.js';

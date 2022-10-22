@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {LocalUserModel} from '../../model/UserModel';
 
 export class AxiosRequest{
   private BASE_URL = 'http://localhost:3003/';
@@ -24,5 +25,19 @@ export class AxiosRequest{
         setIsLoading(false);
         return false;
       });
+  }
+
+  public async getUserList(setUserListLoading): Promise<LocalUserModel[] | []>{
+    return await axios.get(`${this.BASE_URL}users`).then((response: any) => {
+      console.log('error', response.length, response);
+      if (response.length === 0)
+        return [];
+      console.log('response', response);
+      return response.data;
+    }).catch(error => {
+      console.log('getUserList error:', error.message || error.response?.data?.message);
+      setUserListLoading(false);
+      return [];
+    });
   }
 }

@@ -16,9 +16,7 @@ const SignupView = () => {
   };
 
   const [form, setForm] = useState(clearedForm);
-
   const clearForm = () => {setForm(clearedForm);};
-
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -73,16 +71,15 @@ const SignupView = () => {
               name="userPhoneNumber"
               placeholder='Digite seu telefone'
               value={form.maskedNumber}
-              maxLength={15}
+              maxLength={16}
               onChange={e => setForm({...form, userPhoneNumber: e.target.value})}
             />
           </Form.Item>
         </Form>
         <Button
           loading={loading}
-          onClick={e => {
-            e.preventDefault;
-            new AxiosRequest().registerUser(form, setLoading, clearForm);
+          onClick={async (e: any) => {
+            await new AxiosRequest().registerUser(e, form, setLoading, clearForm);
           }}
         >
           {loading ? '' : 'CADASTRAR'}

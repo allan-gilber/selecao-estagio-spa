@@ -43,5 +43,5 @@ export const ListStyle = styled.ul`
 `;
 
 export const Logo = styled.img`
-    height: min(5rem, 40%);
+    height: min(5rem, 25%);
 `;

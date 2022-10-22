@@ -12,17 +12,17 @@ export class DataParser {
     return value;
   }
 
-  public tableDataFormater(array: LocalUserModel[]) {
+  public tableDataFormater(localUserArray: LocalUserModel[]) {
     const tableList: React.ReactElement[] = [];
 
     for (let index = 0; index < 4; index++){
       tableList.push(
         <tr key={index}>
           <td >{index + 1}</td>
-          <td>{array[index]? array[index].userName : ''}</td>
-          <td>{array[index]? array[index].userEmail : ''}</td>
-          <td>{array[index]? array[index].userBirthday : ''}</td>
-          <td>{array[index]? array[index].userPhoneNumber : ''}</td>
+          <td>{localUserArray[index]? localUserArray[index].userName : ''}</td>
+          <td>{localUserArray[index]? localUserArray[index].userEmail : ''}</td>
+          <td>{localUserArray[index]? localUserArray[index].userBirthday : ''}</td>
+          <td>{localUserArray[index]? this.formatPhoneNumber(localUserArray[index].userPhoneNumber) : ''}</td>
         </tr>
       );
     }

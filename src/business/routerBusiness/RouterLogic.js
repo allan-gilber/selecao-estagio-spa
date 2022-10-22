@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import MainView from '../../presentation/MainView';
 import SignupView from '../../presentation/SignupView';
-import RegisterList from '../../presentation/RegisterList';
+import RegisteredList from '../../presentation/RegisteredList';
 import ScrollButton from '../../presentation/components/ScrollButton/index';
 
 export default function Router(){
@@ -16,7 +16,7 @@ export default function Router(){
             <>
               <MainView />
               <SignupView />
-              <RegisterList />
+              <RegisteredList />
               <ScrollButton />
             </>
           }/>

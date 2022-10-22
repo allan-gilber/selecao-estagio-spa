@@ -38,10 +38,14 @@ export const TitleBox = styled.div`
 `;
 
 export const TableBox = styled.section`
+    position: relative;
     width: 55%;
     height: 50%;
     overflow-y: hidden;
     padding: 0 0 5% 0;
+    .ant-spin-tex{
+        font-family: Heveltica-Condensed;
+    }
 `;
 
 export const RegisterListContainer = styled.section`

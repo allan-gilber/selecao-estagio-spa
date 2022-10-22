@@ -8,7 +8,7 @@ import {AxiosRequest} from '../../business/services/axiosServices';
 const RegisteredList = () => {
   const [userListloading, setUserListLoading] = useState(true);
   const [userData, setUserData]: any = useState([]);
-  const antIcon = <LoadingOutlined style={{fontSize: 60}} spin></LoadingOutlined>;
+  const loadingIcon = <LoadingOutlined style={{fontSize: 60}} spin/>;
 
 
   const getUserData = async () => {
@@ -21,11 +21,6 @@ const RegisteredList = () => {
     getUserData();
   }, []);
 
-  useEffect(() => {
-    console.log('teste', userData);
-  }, [ userData ]);
-
-
   return (
     <RegisterListContainer>
       <TitleBox>
@@ -35,7 +30,7 @@ const RegisteredList = () => {
 
         <Spin
           size='large'
-          indicator={antIcon}
+          indicator={loadingIcon}
           delay={800}
           spinning={userListloading}
         >
